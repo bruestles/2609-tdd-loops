@@ -88,7 +88,11 @@ export function sumTo(n) {
  * sumFromTo(2, 2); // 2
  */
 export function sumFromTo(a, z) {
-  // TODO
+  let result = 0;
+  for (let i = a; i <= z; i++) {
+    result += i;
+  }
+  return result;
 }
 
 /**
@@ -103,7 +107,10 @@ export function sumFromTo(a, z) {
  * countdown(5); // logs 5, 4, 3, 2, 1
  */
 export function countdown(n) {
-  // TODO
+  while (n > 0) {
+    console.log(n);
+    n--;
+  }
 }
 
 /**
