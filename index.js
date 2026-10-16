@@ -10,8 +10,19 @@
  * @example
  * echo("test", 1); // "test"
  */
+// export function echo(word, n) {
+//   let result = "";
+//   while (n > 0) {
+//     n--;
+//     result += word;
+//   }
+//   return result;
+// }
 export function echo(word, n) {
-  // TODO
+  if (n <= 0 || word === "") {
+    return "";
+  }
+  return word.repeat(n);
 }
 
 /**
@@ -26,10 +37,25 @@ export function echo(word, n) {
  * @example
  * echoWithSpace("test", 1); // "test"
  */
-export function echoWithSpace(word, n) {
-  // TODO
-}
+// export function echoWithSpace(word, n) {
+//   if (n <= 0 || word === "") {
+//     return "";
+//   }
+//   return word.repeat(n).split("").join(" ");
+// }
 
+export function echoWithSpace(word, n) {
+  let result = "";
+  if (n <= 0 || word === "") {
+    return "";
+  }
+  result = word;
+  while (n - 1 > 0) {
+    result += " " + word;
+    n--;
+  }
+  return result;
+}
 /**
  * @param {number} n - The number to stop at
  * @returns {number} The sum of all integers from 1 to n, inclusive.
@@ -42,7 +68,11 @@ export function echoWithSpace(word, n) {
  * sumTo(100); // 5050
  */
 export function sumTo(n) {
-  // TODO
+  let result = 0;
+  for (let i = 1; i <= n; i++) {
+    result += i;
+  }
+  return result;
 }
 
 /**
