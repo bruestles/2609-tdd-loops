@@ -148,8 +148,18 @@ export function sumOddsToN(n) {
  * @example
  * getGrowthTime(5, 78); // 80
  */
+
 export function getGrowthTime(start, target) {
-  // TODO
+  if (start <= 0) {
+    return;
+  }
+  let numberOfBacteriaCells = start;
+  let numberOfMinutes = 0;
+  while (numberOfBacteriaCells < target && start < target) {
+    numberOfBacteriaCells = numberOfBacteriaCells * 2;
+    numberOfMinutes = numberOfMinutes + 20;
+  }
+  return numberOfMinutes;
 }
 
 /**
@@ -169,7 +179,16 @@ export function getGrowthTime(start, target) {
  * getCompoundTime(30000, 0.04, 50000); // 14
  */
 export function getCompoundTime(start, rate, target) {
-  // TODO
+  if (start <= 0 || rate <= 0) {
+    return;
+  }
+  let balance = start;
+  let years = 0;
+  while (balance < target) {
+    balance = balance * (1 + rate);
+    years++;
+  }
+  return years;
 }
 
 /**
