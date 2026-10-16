@@ -125,7 +125,11 @@ export function countdown(n) {
  * sumOddsToN(1); // 1
  */
 export function sumOddsToN(n) {
-  // TODO
+  let result = 0;
+  for (let i = 1; i <= n; i += 2) {
+    result += i;
+  }
+  return result;
 }
 
 /**
